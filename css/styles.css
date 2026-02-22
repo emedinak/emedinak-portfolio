@@ -361,8 +361,11 @@ html {
 
   @media (max-width: 768px) {
     .hero-photo {
-      width: 150px;
-      height: 150px;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      object-position: center top; /* 👈 clave */
+      border-radius: 50%;
     }
   }
 
