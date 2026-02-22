@@ -359,13 +359,6 @@ html {
     text-align: center;
   }
 
-  @media (max-width: 768px) {
-    .hero-photo {
-      width: 150px;
-      height: 150px;
-    }
-  }
-
   .hero h1 {
     font-size: 1.8rem;
     line-height: 1.2;
@@ -409,8 +402,10 @@ html {
   color: #fff !important;
   text-align: center;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .mobile-cv:hover {
   opacity: 0.9;
+  text-decoration: none; 
 }
