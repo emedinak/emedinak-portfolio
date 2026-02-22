@@ -399,3 +399,18 @@ html {
   }
 
 }
+
+.mobile-cv {
+  display: block;
+  margin-top: 15px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #111;
+  color: #fff !important;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mobile-cv:hover {
+  opacity: 0.9;
+}
