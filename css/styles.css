@@ -1,3 +1,15 @@
+/* ============================= */
+/* GLOBAL BASE */
+/* ============================= */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -12,25 +24,69 @@
   border-radius: 50%;
 }
 
+/* ============================= */
+/* MAIN LAYOUT */
+/* ============================= */
+
 .main-content {
   margin-left: 320px;
   min-height: 100vh;
   background: #fff;
 }
 
+/* Contenedor fluido moderno */
 .content-wrap {
-  max-width: 1175px;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding-left: clamp(20px, 4vw, 48px);
+  padding-right: clamp(20px, 4vw, 48px);
 }
 
-@media (max-width: 991.98px) {
-  .main-content {
-    margin-left: 0;
+/* Desktop grande */
+@media (min-width: 1400px) {
+  .content-wrap {
+    max-width: 1400px;
   }
 }
 
-/* ========== SIDEBAR ========== */
+/* Laptop estándar */
+@media (max-width: 1200px) {
+  .content-wrap {
+    max-width: 1100px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .content-wrap {
+    max-width: 900px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .content-wrap {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .card-body {
+    padding: 1.1rem;
+  }
+}
+
+/* ============================= */
+/* SIDEBAR */
+/* ============================= */
 
 .sidebar {
   position: fixed;
@@ -69,11 +125,13 @@
   }
 }
 
-/* ========== PROJECT CARDS ========== */
+/* ============================= */
+/* PROJECT CARDS */
+/* ============================= */
 
 .card {
   border-radius: 16px;
-  overflow: hidden; /* CLAVE para que las covers respeten el radio */
+  overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -87,7 +145,17 @@
   padding: 1.25rem 1.25rem 1.4rem;
 }
 
-/* ========== PROJECT COVERS ========== */
+.card-body p {
+  font-size: 0.95rem;
+}
+
+.card-body ul {
+  font-size: 0.9rem;
+}
+
+/* ============================= */
+/* PROJECT COVERS */
+/* ============================= */
 
 .project-cover,
 .project-cover-tindog,
@@ -137,7 +205,7 @@
   background: rgba(0, 0, 0, 0.45);
 }
 
-/* Cover Label */
+/* Cover Labels */
 
 .project-cover-label,
 .project-cover-tindog span {
@@ -149,7 +217,9 @@
   letter-spacing: 0.3px;
 }
 
-/* ========== BADGES ========== */
+/* ============================= */
+/* BADGES */
+/* ============================= */
 
 .badge {
   font-size: 0.75rem;
@@ -157,7 +227,9 @@
   border-radius: 999px;
 }
 
-/* ========== SKILLS (si los usas en otras páginas) ========== */
+/* ============================= */
+/* SKILLS */
+/* ============================= */
 
 .skill-card {
   background: #fff;
