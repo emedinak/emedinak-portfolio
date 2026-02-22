@@ -1,0 +1,168 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-photo {
+  width: 180px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center 15%;
+  border-radius: 50%;
+}
+
+.main-content {
+  margin-left: 320px;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.content-wrap {
+  max-width: 1175px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 991.98px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+/* ========== SIDEBAR ========== */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 320px;
+  background: #ececec;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sidebar .nav-link {
+  border-radius: 12px;
+  padding: 10px 12px;
+  color: #111;
+  font-weight: 600;
+}
+
+.sidebar .nav-link.active {
+  background: #0d6efd;
+  color: #fff;
+}
+
+.sidebar .btn {
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    display: none !important;
+  }
+}
+
+/* ========== PROJECT CARDS ========== */
+
+.card {
+  border-radius: 16px;
+  overflow: hidden; /* CLAVE para que las covers respeten el radio */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card-body {
+  padding: 1.25rem 1.25rem 1.4rem;
+}
+
+/* ========== PROJECT COVERS ========== */
+
+.project-cover,
+.project-cover-tindog,
+.project-cover-job {
+  height: 180px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Kaloro */
+
+.project-cover-kaloro {
+  background: url("../images/kaloro.png") center 60% / cover no-repeat;
+}
+
+.project-cover-kaloro::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* TinDog */
+
+.project-cover-tindog {
+  background: url("../images/tindog.png") center center / cover no-repeat;
+  background-color: #ff4c68;
+  transition: transform 0.3s ease;
+}
+
+.project-cover-tindog:hover {
+  transform: scale(1.03);
+}
+
+/* Job Market */
+
+.project-cover-job {
+  background: url("../images/jobs.png") center center / cover no-repeat;
+}
+
+.project-cover-job::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Cover Label */
+
+.project-cover-label,
+.project-cover-tindog span {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+}
+
+/* ========== BADGES ========== */
+
+.badge {
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* ========== SKILLS (si los usas en otras páginas) ========== */
+
+.skill-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
