@@ -112,19 +112,18 @@
   position: relative;
 }
 
-/* Kaloro */
 .project-cover-kaloro {
   background: url("../images/kaloro.png") center 60% / cover no-repeat;
 }
 
-.project-cover-kaloro::after {
+.project-cover-kaloro::after,
+.project-cover-job::after {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
 }
 
-/* TinDog */
 .project-cover-tindog {
   background: url("../images/tindog.png") center center / cover no-repeat;
   background-color: #ff4c68;
@@ -135,16 +134,8 @@
   transform: scale(1.03);
 }
 
-/* Job Market */
 .project-cover-job {
   background: url("../images/jobs.png") center center / cover no-repeat;
-}
-
-.project-cover-job::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
 }
 
 .project-cover-label,
@@ -235,6 +226,9 @@
   border-radius: 18px;
   padding: 18px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .skill-card-top {
@@ -264,6 +258,10 @@
   font-size: 0.85rem;
 }
 
+.row.g-4 > div {
+  display: flex;
+}
+
 
 /* =======================================================
    BADGES
@@ -275,17 +273,75 @@
   border-radius: 999px;
 }
 
-/* ============================= */
-/* FORCE EQUAL HEIGHT SKILL CARDS */
-/* ============================= */
 
-.row.g-4 > div {
-  display: flex;
+/* =======================================================
+   GLOBAL SCALE DOWN (DESKTOP)
+======================================================= */
+
+html {
+  font-size: 13px;
 }
 
-.skill-card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.content-wrap {
+  max-width: 1050px;
+}
+
+.sidebar {
+  width: 280px;
+}
+
+.main-content {
+  margin-left: 280px;
+  padding-top: 10px;
+}
+
+
+/* =======================================================
+   RESPONSIVE IMPROVEMENTS
+======================================================= */
+
+/* Tablet */
+@media (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+
+  .content-wrap {
+    max-width: 900px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  html {
+    font-size: 15px; /* Más legible en móvil */
+  }
+
+  .content-wrap {
+    padding: 0 16px;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .skill-card {
+    padding: 14px;
+  }
+
+  .project-cover {
+    height: 150px;
+  }
+
+  .cert-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .cert-logo {
+    width: 44px;
+    height: 44px;
+  }
 }
