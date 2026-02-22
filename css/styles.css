@@ -345,3 +345,38 @@ html {
     height: 44px;
   }
 }
+
+/* ============================= */
+/* HERO MOBILE FIX */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .hero-photo {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .content-wrap {
+    padding: 0 20px;
+  }
+
+}
