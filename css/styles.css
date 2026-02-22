@@ -1,14 +1,6 @@
-/* ============================= */
-/* GLOBAL BASE */
-/* ============================= */
-
-html {
-  font-size: 16px;
-}
-
-body {
-  overflow-x: hidden;
-}
+/* =======================================================
+   BASE LAYOUT
+======================================================= */
 
 .hero {
   min-height: 100vh;
@@ -24,76 +16,35 @@ body {
   border-radius: 50%;
 }
 
-/* ============================= */
-/* MAIN LAYOUT */
-/* ============================= */
-
 .main-content {
   margin-left: 320px;
   min-height: 100vh;
   background: #fff;
 }
 
-/* Contenedor fluido moderno */
 .content-wrap {
-  width: 100%;
-  max-width: 1280px;
+  max-width: 1175px;
   margin: 0 auto;
-  padding-left: clamp(20px, 4vw, 48px);
-  padding-right: clamp(20px, 4vw, 48px);
+  padding: 0 24px;
 }
 
-/* Desktop grande */
-@media (min-width: 1400px) {
-  .content-wrap {
-    max-width: 1400px;
-  }
-}
-
-/* Laptop estándar */
-@media (max-width: 1200px) {
-  .content-wrap {
-    max-width: 1100px;
-  }
-}
-
-/* Tablet */
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
   .main-content {
     margin-left: 0;
   }
-
-  .content-wrap {
-    max-width: 900px;
-  }
 }
 
-/* Mobile */
-@media (max-width: 576px) {
-  .content-wrap {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
 
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .card-body {
-    padding: 1.1rem;
-  }
-}
-
-/* ============================= */
-/* SIDEBAR */
-/* ============================= */
+/* =======================================================
+   SIDEBAR
+======================================================= */
 
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
   width: 320px;
+  height: 100vh;
   background: #ececec;
   border-right: 1px solid rgba(0, 0, 0, 0.08);
   padding: 28px 22px;
@@ -125,9 +76,10 @@ body {
   }
 }
 
-/* ============================= */
-/* PROJECT CARDS */
-/* ============================= */
+
+/* =======================================================
+   CARDS (Projects & Experience)
+======================================================= */
 
 .card {
   border-radius: 16px;
@@ -145,30 +97,22 @@ body {
   padding: 1.25rem 1.25rem 1.4rem;
 }
 
-.card-body p {
-  font-size: 0.95rem;
-}
 
-.card-body ul {
-  font-size: 0.9rem;
-}
-
-/* ============================= */
-/* PROJECT COVERS */
-/* ============================= */
+/* =======================================================
+   PROJECT COVERS
+======================================================= */
 
 .project-cover,
 .project-cover-tindog,
 .project-cover-job {
   height: 180px;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 /* Kaloro */
-
 .project-cover-kaloro {
   background: url("../images/kaloro.png") center 60% / cover no-repeat;
 }
@@ -181,7 +125,6 @@ body {
 }
 
 /* TinDog */
-
 .project-cover-tindog {
   background: url("../images/tindog.png") center center / cover no-repeat;
   background-color: #ff4c68;
@@ -193,7 +136,6 @@ body {
 }
 
 /* Job Market */
-
 .project-cover-job {
   background: url("../images/jobs.png") center center / cover no-repeat;
 }
@@ -205,8 +147,6 @@ body {
   background: rgba(0, 0, 0, 0.45);
 }
 
-/* Cover Labels */
-
 .project-cover-label,
 .project-cover-tindog span {
   position: relative;
@@ -217,19 +157,77 @@ body {
   letter-spacing: 0.3px;
 }
 
-/* ============================= */
-/* BADGES */
-/* ============================= */
 
-.badge {
-  font-size: 0.75rem;
-  padding: 6px 14px;
-  border-radius: 999px;
+/* =======================================================
+   EXPERIENCE
+======================================================= */
+
+.exp-logo-cap {
+  height: 180px;
+  background: #d1006b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-/* ============================= */
-/* SKILLS */
-/* ============================= */
+.exp-logo {
+  max-height: 140px;
+  max-width: 70%;
+  object-fit: contain;
+}
+
+
+/* =======================================================
+   CERTIFICATIONS
+======================================================= */
+
+.cert-list {
+  max-width: 980px;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.cert-item:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.cert-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 10px;
+  flex: 0 0 auto;
+}
+
+.cert-content {
+  flex: 1;
+}
+
+.cert-title {
+  font-weight: 700;
+}
+
+.cert-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cert-link:hover {
+  text-decoration: underline;
+}
+
+
+/* =======================================================
+   SKILLS
+======================================================= */
 
 .skill-card {
   background: #fff;
@@ -237,4 +235,42 @@ body {
   border-radius: 18px;
   padding: 18px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.skill-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.skill-sub {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(13, 110, 253, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+
+/* =======================================================
+   BADGES
+======================================================= */
+
+.badge {
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border-radius: 999px;
 }
