@@ -380,3 +380,21 @@ html {
   }
 
 }
+
+/* ============================= */
+/* FIX MOBILE LEFT SHIFT */
+/* ============================= */
+
+@media (max-width: 991.98px) {
+
+  .main-content {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+
+  .content-wrap {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+}
