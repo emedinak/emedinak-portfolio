@@ -137,6 +137,13 @@ body {
   position: relative;
 }
 
+.project-cover-tindog::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
 .project-cover-kaloro {
   background: url("../images/kaloro.png") center 60% / cover no-repeat;
 }
